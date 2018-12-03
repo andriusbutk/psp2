@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA72EF18-5FB3-453E-A04D-A8DA73810BB7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>E_Shop.FacadeService</RootNamespace>
+    <AssemblyName>E-Shop.FacadeService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FacadeService\BasicImageFacadeService.cs" />
+    <Compile Include="FacadeService\ComplexImageFacadeService.cs" />
+    <Compile Include="FacadeService\LowProductFacadeService.cs" />
+    <Compile Include="FacadeService\ManufacturerFacadeService.cs" />
+    <Compile Include="FacadeService\DetailedProductFacadeService.cs" />
+    <Compile Include="FacadeService\NewDescriptionManufacturerService.cs" />
+    <Compile Include="FacadeService\OldDescriptionManufacturerFacadeService.cs" />
+    <Compile Include="Interfaces\IImageFacadeService.cs" />
+    <Compile Include="Interfaces\IManufacturerFacadeService.cs" />
+    <Compile Include="Interfaces\IProductFacadeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\E-Shop.Contract\E-Shop.Contract.csproj">
+      <Project>{be8aee90-6007-4a5c-bd22-217af96604fa}</Project>
+      <Name>E-Shop.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\E-Shop.Entity\E-Shop.Entity.csproj">
+      <Project>{2c02e4c3-d6bb-4b31-9acb-32ea96aef3f7}</Project>
+      <Name>E-Shop.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\E-Shop.Integration\E-Shop.Integration.csproj">
+      <Project>{6CAB1F22-37AB-4B40-9ECF-3603C0528BC0}</Project>
+      <Name>E-Shop.Integration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\E-Shop.Service\E-Shop.Service.csproj">
+      <Project>{A47728AB-CC74-4059-9B26-78C7AE864424}</Project>
+      <Name>E-Shop.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

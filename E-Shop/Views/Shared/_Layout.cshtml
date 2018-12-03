@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop assignment</title>
+    <link href="../../favicon.ico" rel="shortcut icon">
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+<div class="navbar-fixed-top navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="nav navbar-nav" id="main-menu-left">
+                <li>
+                    <h1>PSP 2uzd.</h1></li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+    <div class="container body-content">
+        @RenderBody()
+        <footer class="bs-docs-footer">
+            <div class="container">
+                <p>
+                    Created by Nortal. Editing of this application is only allowed with the purpose of applying to Nortal.<br/>
+                    We are not responsible for the content dynamically loaded or generated on this site and do not endorse the views expressed within that content.<br/>
+                    <a href="#">Back to top</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
